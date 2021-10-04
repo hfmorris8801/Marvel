@@ -7,7 +7,7 @@ namespace Marvel.VM
 {
     public class ViewModelBase : INotifyPropertyChanged
     {
-        private bool _isBusy = false;
+        private bool _isBusy;
 
         public bool IsBusy
         {

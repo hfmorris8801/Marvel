@@ -10,7 +10,7 @@
     x:DefaultBindMode="OneWay"
     mc:Ignorable="d">
     <Page.Resources>
-        <coverter:BoolToVisibilityConverter x:Key="BoolVisibilityConverter" />
+        <coverter:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
     </Page.Resources>
 
     <Grid Padding="0" Background="{StaticResource MarvelRed80Brush}">
@@ -31,6 +31,9 @@
                 <Button Command="{x:Bind ViewModel.ExecuteSearch}" Style="{StaticResource ButtonStyle}">Send Query</Button>
             </StackPanel>
         </Border>
-        <StackPanel Visibility="{x:Bind ViewModel.IsBusy, ConverterParameter={StaticResource BoolToVisibilityConverter}, FallbackValue=Collapsed}"/>
+
+        <Grid Background="{StaticResource White60Brush}" Visibility="{x:Bind ViewModel.IsBusy, Converter={StaticResource BoolToVisibilityConverter}}">
+            <TextBlock Style="{StaticResource LoadingTextBlockStyle}" Text="Searching..." />
+        </Grid>
     </Grid>
 </Page>

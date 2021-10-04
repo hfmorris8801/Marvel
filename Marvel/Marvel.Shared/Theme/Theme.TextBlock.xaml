@@ -23,6 +23,15 @@
         <Setter Property="FontWeight" Value="Light" />
         <Setter Property="TextWrapping" Value="Wrap" />
     </Style>
+  
+    <Style
+        x:Key="LoadingTextBlockStyle"
+        BasedOn="{StaticResource TextBlockStyle}"
+        TargetType="TextBlock">
+        <Setter Property="FontSize" Value="24" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+    </Style>
 
 
 </ResourceDictionary>

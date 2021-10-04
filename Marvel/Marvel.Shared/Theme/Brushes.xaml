@@ -8,6 +8,10 @@
 
     <SolidColorBrush
         x:Key="MarvelRed80Brush"
-        Opacity="50"
+        Opacity="0.80"
         Color="{StaticResource MarvelRed}" />
+    <SolidColorBrush
+        x:Key="White60Brush"
+        Opacity="0.60"
+        Color="{StaticResource White}" />
 </ResourceDictionary>

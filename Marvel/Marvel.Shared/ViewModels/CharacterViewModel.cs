@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Marvel.Commands;
+using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 using System.Windows.Input;
 
 namespace Marvel.VM
@@ -66,7 +68,20 @@ namespace Marvel.VM
         public ICommand ExecuteSearch { get; set; }
         public CharacterViewModel()
         {
+            IsBusy = false;
+            ExecuteSearch = new RelayCommand(search);
+        }
 
+        private void search()
+        {
+            IsBusy = true;
+            //Thread.Sleep(5000);
+            for (int i = 0; i < 1000000; i++)
+            {
+
+            }
+            Name = "Hulk";
+            IsBusy = false;
         }
     }
 }
