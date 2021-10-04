@@ -1,0 +1,15 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+
+        <!--  Colors and Brushes  -->
+
+        <ResourceDictionary Source="ms-appx:///Theme/Colors.xaml" />
+        <ResourceDictionary Source="ms-appx:///Theme/Brushes.xaml" />
+
+        <!--  Controls  -->
+        <ResourceDictionary Source="ms-appx:///Theme/Theme.Card.xaml" />
+        <ResourceDictionary Source="ms-appx:///Theme/Theme.TextBlock.xaml" />
+        <ResourceDictionary Source="ms-appx:///Theme/Theme.TextBox.xaml" />
+        <ResourceDictionary Source="ms-appx:///Theme/Theme.Button.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

@@ -1,0 +1,17 @@
+﻿<UserControl
+    x:Class="Marvel.Views.TextBlockView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:Marvel.Views"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="300"
+    d:DesignWidth="400"
+    x:DefaultBindMode="OneWay"
+    mc:Ignorable="d">
+
+    <StackPanel Orientation="Horizontal">
+        <TextBlock Style="{StaticResource LabelTextBlockStyle}" Text="{x:Bind Label}" />
+        <TextBlock Style="{StaticResource TextTextBlockStyle}" Text="{x:Bind Text}" />
+    </StackPanel>
+</UserControl>
