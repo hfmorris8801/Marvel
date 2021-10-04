@@ -20,16 +20,21 @@
     <Compile Include="$(MSBuildThisFileDirectory)ApiClient\Models\Character.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ApiClient\Models\Thumbnail.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ApiClient\Requests\CharacterRequest.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ApiClient\Responses\CharacterResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiClient\Responses\CharacterDataResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiClient\Models\Comic.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiClient\Responses\ResponseRoot.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Commands\RelayCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controller\CharacterController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Converters\BoolToVisibilityConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\Hero.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Utils\Contants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utils\GeneratorMD5.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\CharacterViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ViewModelBase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\TextBlockView.xaml.cs">

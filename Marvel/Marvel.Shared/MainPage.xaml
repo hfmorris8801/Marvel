@@ -24,9 +24,9 @@
             Height="400"
             Style="{StaticResource CardStyle}">
             <StackPanel>
-                <view:TextBlockView Label="Name:" Text="{x:Bind ViewModel.Name}" />
-                <view:TextBlockView Label="Description:" Text="{x:Bind ViewModel.Description}" />
-                <view:TextBlockView Label="# Comics:" Text="{x:Bind ViewModel.ComicNumber}" />
+                <view:TextBlockView Label="Name:" Text="{x:Bind ViewModel.Hero.Name}" />
+                <view:TextBlockView Label="Description:" Text="{x:Bind ViewModel.Hero.Description}" />
+                <view:TextBlockView Label="# Comics:" Text="{x:Bind ViewModel.Hero.Comics}" />
                 <view:TextBoxView Label="Character ID" Value="{x:Bind ViewModel.CharacterId, Mode=TwoWay}" />
                 <Button Command="{x:Bind ViewModel.ExecuteSearch}" Style="{StaticResource ButtonStyle}">Send Query</Button>
             </StackPanel>

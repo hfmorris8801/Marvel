@@ -10,9 +10,7 @@ namespace Marvel.ApiClient.Api
 {
     public interface IMarvelApi
     {
-        //HIDDEN HOME
-        [Headers("Authorization: Bearer")]
-        [Get("/api/v1/home/hidden-home/")]
-        Task<ApiResponse<CharacterResponse>> GetHiddenHome(CharacterRequest characterRequest, [Header("Accept-Language")] string language);
+        [Get("/v1/public/characters/{id}")]
+        Task<ApiResponse<ResponseRoot>> GetCharacterById([AliasAs("id")] int? id, [AliasAs("apikey")] string apiKey, [AliasAs("hash")] string hash, [AliasAs("ts")] string timeSpan);
     }
 }

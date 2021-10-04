@@ -49,6 +49,7 @@ namespace Marvel
         /// <param name="args">Details about the launch request and process.</param>
         protected override void OnLaunched(LaunchActivatedEventArgs args)
         {
+            Api = new MarvelApi();
 
 #if DEBUG
             if (System.Diagnostics.Debugger.IsAttached)
