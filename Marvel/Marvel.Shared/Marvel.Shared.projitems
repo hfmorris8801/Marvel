@@ -22,6 +22,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)ApiClient\Requests\CharacterRequest.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ApiClient\Responses\CharacterDataResponse.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ApiClient\Models\Comic.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiClient\Responses\ErrorResponse.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ApiClient\Responses\ResponseRoot.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
@@ -35,8 +36,12 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Utils\Contants.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utils\GeneratorMD5.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utils\Validator.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\CharacterViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ViewModelBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ErrorView.xaml.cs">
+      <DependentUpon>ErrorView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\TextBlockView.xaml.cs">
       <DependentUpon>TextBlockView.xaml</DependentUpon>
     </Compile>
@@ -66,6 +71,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="$(MSBuildThisFileDirectory)Theme\Theme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Views\ErrorView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -4,6 +4,7 @@ using Marvel.Entities;
 using Marvel.Utils;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Windows.Input;
@@ -49,9 +50,14 @@ namespace Marvel.VM
 
         private async void searchAsync()
         {
-            IsBusy = true;
-            Hero = await CharacterController.GetCharacterById(int.Parse(CharacterId));
-            IsBusy = false;
+            Errors.Clear();
+            int number = 0;
+            if(Validator.IsInt(CharacterId,out number, Errors))
+            {
+                IsBusy = true;
+                Hero = await CharacterController.GetCharacterById(number, Errors);
+                IsBusy = false;
+            }
         }
     }
 }

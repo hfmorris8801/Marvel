@@ -29,6 +29,7 @@
                 <view:TextBlockView Label="# Comics:" Text="{x:Bind ViewModel.Hero.Comics}" />
                 <view:TextBoxView Label="Character ID" Value="{x:Bind ViewModel.CharacterId, Mode=TwoWay}" />
                 <Button Command="{x:Bind ViewModel.ExecuteSearch}" Style="{StaticResource ButtonStyle}">Send Query</Button>
+                <view:ErrorView Errors="{x:Bind ViewModel.Errors}" />
             </StackPanel>
         </Border>
 
