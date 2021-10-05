@@ -20,7 +20,7 @@ namespace Marvel.Views
     public sealed partial class TextBoxView : UserControl
     {
         public static readonly DependencyProperty LabelProperty = DependencyProperty.Register(
-           nameof(Label), typeof(string), typeof(TextBoxView), new PropertyMetadata(null));
+           nameof(Label), typeof(string), typeof(TextBoxView), new PropertyMetadata(null, OnLabelChanged));
 
         public string Label
         {
@@ -39,6 +39,15 @@ namespace Marvel.Views
         public TextBoxView()
         {
             this.InitializeComponent();
+        }
+
+        private static void OnLabelChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            var Localization = Windows.ApplicationModel.Resources.ResourceLoader.GetForViewIndependentUse();
+            if (Localization != null && e.NewValue is string key && d is TextBoxView textBoxView)
+            {
+                textBoxView.LabelComponent.Text = Localization.GetString(key);
+            }
         }
     }
 }

@@ -17,6 +17,7 @@ namespace Marvel.UnitTests
             //Act
             //characterViewModel.CharacterId = characterId;
             //characterViewModel.ExecuteSearch().Execute(null);
+
             //Assert
             //Assert.IsNull(characterViewModel.Hero);
         }
@@ -31,6 +32,7 @@ namespace Marvel.UnitTests
             //Act
             //characterViewModel.CharacterId = characterId;
             //characterViewModel.ExecuteSearch().Execute(null);
+
             //Assert
             //Assert.IsNotNull(characterViewModel.Hero);
         }

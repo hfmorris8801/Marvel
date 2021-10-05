@@ -13,7 +13,7 @@
         <TextBlock
             Margin="5,10,5,0"
             Style="{StaticResource LabelTextBlockStyle}"
-            Text="{x:Bind Label, Mode=OneWay}" />
+            x:Name="LabelComponent" />
         <TextBox Style="{StaticResource TextBoxStyle}" Text="{x:Bind Value, Mode=TwoWay}" />
     </StackPanel>
 </UserControl>

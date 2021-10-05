@@ -20,15 +20,26 @@
             Opacity="0.8"
             Source="Assets/background.jpg" />
         <Border
-            Width="400"
-            Height="400"
+            Width="700"
+            Height="260"
             Style="{StaticResource CardStyle}">
-            <StackPanel>
-                <view:TextBlockView Label="Name:" Text="{x:Bind ViewModel.Hero.Name, FallbackValue=''}" />
-                <view:TextBlockView Label="Description:" Text="{x:Bind ViewModel.Hero.Description, FallbackValue=''}" />
-                <view:TextBlockView Label="# Comics:" Text="{x:Bind ViewModel.Hero.Comics, FallbackValue=0}" />
-                <view:TextBoxView Label="Character ID" Value="{x:Bind ViewModel.CharacterId, Mode=TwoWay}" />
-                <Button Command="{x:Bind ViewModel.ExecuteSearch}" Style="{StaticResource ButtonStyle}">Send Query</Button>
+            <StackPanel Margin="15">
+                <view:TextBlockView Label="LabelName" Text="{x:Bind ViewModel.Hero.Name, FallbackValue=''}" />
+                <view:TextBlockView Label="LabelDescription" Text="{x:Bind ViewModel.Hero.Description, FallbackValue=''}" />
+                <view:TextBlockView Label="LabelNumberComic" Text="{x:Bind ViewModel.Hero.Comics, FallbackValue=0}" />
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <view:TextBoxView Label="LabelCharacterID" Value="{x:Bind ViewModel.CharacterId, Mode=TwoWay}" />
+                    <Button
+                        Grid.Column="1"
+                        Command="{x:Bind ViewModel.ExecuteSearch}"
+                        Style="{StaticResource ButtonStyle}">
+                        Send Query
+                    </Button>
+                </Grid>
                 <view:ErrorView Errors="{x:Bind ViewModel.Errors}" />
             </StackPanel>
         </Border>

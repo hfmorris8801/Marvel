@@ -4,6 +4,9 @@
     </ResourceDictionary.MergedDictionaries>
     <Style x:Key="ButtonStyle" TargetType="Button">
         <Setter Property="Background" Value="{StaticResource MarvelRed}" />
+        <Setter Property="Foreground" Value="{StaticResource White}" />
+        <Setter Property="CornerRadius" Value="5" />
+
         <Setter Property="Margin" Value="5" />
     </Style>
 

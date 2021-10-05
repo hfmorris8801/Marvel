@@ -26,20 +26,11 @@ namespace Marvel
     public partial class MainPage : Page
     {
         public CharacterViewModel ViewModel { get; set; }
-
-        //ResourceLoader Localization;
-
-        //public string GetString(string key) => Localization?.GetString(key); 
+       
         public MainPage()
         {
             this.InitializeComponent();
             ViewModel = new CharacterViewModel();
-            Loaded += MainPage_Loaded;
-        }
-
-        private void MainPage_Loaded(object sender, RoutedEventArgs e)
-        {
-            //Localization = Windows.ApplicationModel.Resources.ResourceLoader.GetForViewIndependentUse();
         }
     }
 }

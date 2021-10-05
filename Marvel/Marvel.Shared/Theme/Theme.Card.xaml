@@ -4,12 +4,15 @@
     xmlns:System="using:System"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006">
-    
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Brushes.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
     <Style x:Key="CardStyle" TargetType="Border">
-        <Setter Property="CornerRadius" Value="5" />
+        <Setter Property="CornerRadius" Value="15" />
         <Setter Property="BorderBrush" Value="LightGray" />
         <Setter Property="BorderThickness" Value="1" />
-        <Setter Property="Background" Value="White" />
+        <Setter Property="Background" Value="{StaticResource White80Brush}" />
     </Style>
 
 

@@ -22,7 +22,7 @@
         TargetType="TextBlock">
         <Setter Property="FontWeight" Value="Light" />
         <Setter Property="TextWrapping" Value="Wrap" />
-        <Setter Property="MaxWidth" Value="300" />
+        <Setter Property="MaxWidth" Value="550" />
     </Style>
 
     <Style

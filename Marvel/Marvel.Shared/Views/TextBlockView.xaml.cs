@@ -20,7 +20,9 @@ namespace Marvel.Views
     public sealed partial class TextBlockView : UserControl
     {
         public static readonly DependencyProperty LabelProperty = DependencyProperty.Register(
-           nameof(Label), typeof(string), typeof(TextBlockView), new PropertyMetadata(null));
+           nameof(Label), typeof(string), typeof(TextBlockView), new PropertyMetadata(null, OnLabelChanged));
+
+      
 
         public string Label
         {
@@ -40,6 +42,15 @@ namespace Marvel.Views
         public TextBlockView()
         {
             this.InitializeComponent();
+        }
+
+        private static void OnLabelChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            var Localization = Windows.ApplicationModel.Resources.ResourceLoader.GetForViewIndependentUse();
+            if(Localization != null && e.NewValue is string key && d is TextBlockView textBlockView)
+            {
+                textBlockView.LabelComponent.Text = Localization.GetString(key);
+            }
         }
     }
 }

@@ -11,7 +11,7 @@
     mc:Ignorable="d">
 
     <StackPanel Orientation="Horizontal">
-        <TextBlock Style="{StaticResource LabelTextBlockStyle}" Text="{x:Bind Label}" />
+        <TextBlock Style="{StaticResource LabelTextBlockStyle}" x:Name="LabelComponent" />
         <TextBlock Style="{StaticResource TextTextBlockStyle}" Text="{x:Bind Text}" />
     </StackPanel>
 </UserControl>

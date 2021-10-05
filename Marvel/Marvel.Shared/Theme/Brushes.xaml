@@ -13,5 +13,10 @@
     <SolidColorBrush
         x:Key="White60Brush"
         Opacity="0.60"
+        Color="{StaticResource White}" /> 
+    
+    <SolidColorBrush
+        x:Key="White80Brush"
+        Opacity="0.80"
         Color="{StaticResource White}" />
 </ResourceDictionary>
