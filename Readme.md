@@ -12,5 +12,5 @@ This application allows the possibility to consult the information about your fa
 ## Final Step
 When you finished to setup all the prerequisites, open the .sln file, located in the folder Marvel. With the Visual Studio opened select (WASM) one of the projects as start-up project and press Ctrl + f5.
 
-##Author
-**hfmorris8801@gmail.com
+## Author
+    ** hfmorris8801@gmail.com
